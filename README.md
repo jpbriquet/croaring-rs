@@ -79,6 +79,15 @@ Running benchmark suite (currently on Rust nightly toolchain only):
 cargo bench
 ```
 
+### Generate CRoaring bindings
+
+Bindings have to be updated when the CRoaring git submodule is updated.
+
+```
+cd croaring-sys
+bindgen CRoaring/roaring.h --blacklist-type max_align_t --generate-inline-functions -o src/croaring-sys.rs
+```
+
 ### Documentation
 
 Current documentation is available at https://saulius.github.io/croaring-rs/croaring/
