@@ -1,8 +1,5 @@
 extern crate gcc;
 
-use std::env;
-use std::path::PathBuf;
-
 fn main() {
     gcc::Build::new()
       .flag("-std=c11")
